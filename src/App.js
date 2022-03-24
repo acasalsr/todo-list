@@ -30,7 +30,7 @@ function TodoItem({ todo, onUpdated }) {
     <li
       className={todo.completed ? "completed" : "pending"}
       onClick={() => {
-        fetch(`${endPoint} / ${todo.id}`, {
+        fetch(`${endPoint}/${todo.id}`, {
           method: "POST",
           body: JSON.stringify({ completed: !todo.completed }),
         })
